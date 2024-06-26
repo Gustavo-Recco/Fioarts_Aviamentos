@@ -1,0 +1,570 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*url da font*/
+body {
+
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Anonymous Pro", monospace, sans-serif;
+}
+
+header {
+
+   	box-shadow: 0px 3px 10px #464646;
+}
+
+.navegacao {
+
+	display: flex;
+	justify-content: space-between;
+	padding: 1%;
+}
+
+.lista {
+	
+	padding: 0% 1% 0% 0%;  		
+	display: flex;
+	flex-wrap: wrap;
+	align-items:center;
+	list-style: none;
+	text-decoration: none;
+}
+
+/* Opcoes de navegaçao */
+.lista li a {
+	
+	position: relative;
+	color: #424242 ;   
+	font-size: 1.5rem;
+	margin: 0px 40px 0px 0px; /* Mexe estre as palavras*/
+	/* Sem linha de texto */	 
+	text-decoration: none;		         
+}
+
+/* Linha interativa na parte de baixo da navegação */
+.lista li a::after {
+
+    content: '';                       /* É utilizada no ::after para inserir o conteúdo gerado*/
+   	position: absolute;				   /* Não mexe a posição */
+    left: 0;
+    bottom: -2px;                      /* Distancia da linha com a borda */
+    width: 100%;
+    height: 3px;
+    background-color: #47C8C0;       /* Cor da linha */
+    border-radius: 5px;
+    transform-origin: right;           /* Lado que a linha começa */
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/* Outra parte da linha com interação da navegação */
+.lista li a:hover::after {
+
+    transform-origin: left;            /* Lado que termina a linha */
+    transform: scaleX(1);
+}
+
+/* logo que atualiza a pagina */
+#logo2 {
+	
+	position: fixed;
+	right: 0%;  
+	top: 10px;    
+}
+
+#logo2::after {
+
+    content: '';                       
+   	position: absolute;				   
+    left: 0;
+    bottom: -2px;                      
+    width: 90%;
+    height: 3px;
+    background-color: #47C8C0;       
+    border-radius: 5px;
+    transform-origin: right;           
+    transform: scaleX(0);
+    transition: transform .5s;
+}	
+
+#logo2:hover::after {
+
+    transform-origin: left;            
+    transform: scaleX(1);
+}
+/* Mexe no tamanho do carrocel */
+#carrocel {
+	             
+	margin: 5% 0% 2% 0%;          
+	display: flex;
+	justify-content: center;
+	padding: 0 30px 0 30px;;
+}
+
+#carrocel img {
+
+	border-radius: 5px;
+	box-shadow: 0px 3px 10px #464646;
+}
+
+#image {
+
+	max-height: 500px;
+}
+
+#imagem1, #imagem2 {
+
+	margin: 10% 0% 0% 0%;   
+	max-height: 450px;
+}
+
+/* Classe para a maioria dos botoes*/
+.botoes {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Botoes do carrocel */
+.botao {           
+
+	background-color: #47C8C0; 
+	color:#424242 ; 
+	border-radius: 50px;
+	box-shadow: 0px 3px 10px #464646;
+	margin: 10px; 
+	width: 75px;
+	height: 75px;
+	font-size: 45px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.botao:hover {
+
+	background-color:#5ce9df; 
+	scale: 1.05;
+	color:black;
+}
+
+/* Frase abaixo do carrocel */
+.titulo {
+
+	color: #424242 ;                     
+	text-decoration: none;				   
+	font-size: 1.8em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.titulo #frase {                 
+							
+	border-radius: 20px;
+	box-shadow: 0px 3px 10px #464646;
+	padding-left: 5%;
+	padding-right: 5%;
+	/*top right bottom left*/
+	margin: 5% 17% 5% 17%;              
+}
+
+/* Parte onde fica o sobre da empresa*/
+.texto {
+	
+   	display:flex;	
+	margin: 2% 5% 4% 5%; 	
+}
+
+.texto #sobre {
+	
+	border: 2px solid #47C8C0;
+	box-shadow: 0px 3px 10px #575757;
+   	border-radius: 20px;
+	margin: 5% 5% 0% 15%;   
+	height: 300px;
+	flex-wrap: wrap;	
+}
+
+/* Titulo sobre */
+#sobre h2  {
+
+	color: #424242 ; 
+	padding: 1% 2% 0% 2%;                  
+	display: flex;
+	justify-content: center;
+}
+
+#sobre p  {
+
+	text-align:center;
+	color: #656766;
+	padding: 0% 10% 0% 10%;  
+	font-size: 1.1rem;    
+}
+
+#imgRetros {
+
+	display: flex;
+	padding: 1% 18% 1% 0%;  
+}
+
+#imgRetros img {
+
+	max-width: 300px;
+	border-radius: 10px;
+	box-shadow: 0px 3px 10px #464646;
+}
+
+/* Botao produtos */
+.btn {
+
+	background-color: #47C8C0; 
+	color: #464646;
+	padding: 10px;
+	margin: 30px;
+	border-radius: 40px;
+	box-shadow: 0px 3px 10px #464646;
+	width: 300px;
+	font-size: 1.8rem;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;	
+}
+
+.btn:hover {
+	
+	color:black;
+	font-size: 1.8rem;
+	background-color:#5ce9df; 
+	scale: 1.05;
+}	
+
+/* Mexe no catalago*/
+.catalago {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0% 10% 0% 10%;
+	padding: 5px;	
+}
+
+/* Tipos de produtos */
+.tipos {    
+	
+	color: #424242 ;                     
+	text-decoration: none;				   
+	font-size: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+.tipos h1 {
+
+	text-align: center;
+	width: 200px;
+	padding: 10px;	
+	margin: 1% 0% 1% 0%;
+	border-radius: 20px;
+	box-shadow: 0px 3px 10px #464646;
+	color:  #424242 ; 
+}
+
+/* Mexe nas imagens*/
+.card {
+
+	border-radius: 20px;
+	box-shadow: 0px 3px 10px #464646;
+	background-color:white;
+	width: 270px;
+	height: 400px;
+	margin: 30px;
+	padding: 20px;
+}
+
+.card a{
+
+	color: #424242 ; 
+	list-style: none;
+	text-decoration: none;
+}
+.card h2{
+
+	margin: 15px;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: end;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.card:hover{
+	scale: 1.05;
+
+}
+
+.imagem{
+
+	display: flex;
+	background-color: white;
+	max-width: 270px;
+	margin-bottom: 15px;
+	background-size:cover ;	 
+}
+
+/* Contato*/
+aside {
+	
+   	display:flex;	
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 1% 0% 1% 0%;	
+}
+
+aside .contato {
+	
+	padding: 20px;
+	border: 10px solid #47C8C0;
+	box-shadow: 0px 3px 10px #464646;
+    margin: 2% 3% 2% 0%;              
+}
+
+.contato:hover {
+
+	scale: 1.05;
+}
+
+#WhatsApp {
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+#WhatsApp::after {
+
+    content: '';                       /* É utilizada no ::after para inserir o conteúdo gerado*/
+   	position: absolute;				   /* Não mexe a posição */
+    bottom: -3px;                      /* Distancia da linha com a borda */
+    width: 60%;
+    height: 3px;
+    background-color: #47C8C0;       /* Cor da linha */
+    border-radius: 5px;
+    transform-origin: right;           /* Lado que a linha começa */
+    transform: scaleX(0);
+    transition: transform .5s;
+}	
+
+#WhatsApp:hover::after {
+
+    transform-origin: left;            /* Lado que termina a linha */
+    transform: scaleX(1);
+}
+
+#mapa {
+
+	display: flex;
+	border: 10px solid #47C8C0;
+	box-shadow: 0px 3px 10px #464646;
+	margin: 2% 0% 2% 0%;              
+}
+#mapa:hover {
+
+	scale: 1.05;
+}
+
+/* RODAPE */
+#rodape {
+
+	padding: 1%;						    
+	border-top: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+#rodape img {
+
+	max-width: 500px;
+}
+
+#rodape p {
+	
+	color: #424242 ; 
+	font-size: small;
+	margin-bottom: 5%;               /* Espaçamento inferior da legenda */
+	padding-left: 22px;
+}
+
+@media screen and (max-width: 1450px) and (min-width: 750px) {
+
+	#imagem1, #imagem2 {
+
+		display: none; 
+	}
+	.titulo #frase {  
+
+		text-align:  center;
+	}
+	
+	.texto {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.texto #sobre {
+		
+		margin: 5% 10% 5% 10%;   
+		height: 300px;
+	}
+
+	#sobre h2  {
+
+		padding: 1% 2% 0% 2%;                  
+	}
+
+	#sobre p  {
+
+		padding: 0% 10% 0% 10%;  
+	}
+
+	#imgRetros {
+		 
+		padding: 1% 0% 1% 0%; 	
+	}
+
+	aside .contato {
+		
+		margin: 2% 2% 2% 0%;              
+	}  /*top right bottom left*/
+}
+
+@media screen and (max-width: 750px) {
+
+    .navegacao {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+		flex-direction: column;		
+	}
+
+	.lista {
+
+		flex-direction: column;	
+	}
+
+    .lista li a {
+
+		display: block;
+		border: 2px solid #47C8C0;
+		border-radius: 6px;
+        color:#464646;
+		font-size: 17px;
+		text-align: center;
+		margin: 1px 0px 25px 0px;		/*top right bottom left*/
+		padding: 5px 0px 0px 0px;
+		width: 100px;                /* Largura do botão*/
+    	height: 20px;
+    }
+ 
+	.lista li a:hover { 
+
+		color:black;
+		background-color:#47C8C0;
+		scale: 1.05; 
+	}
+
+	.lista li a::after {
+
+		display: none;
+	}
+
+	#logo2 {
+
+		display: none;
+	}
+
+	#carrocel {
+		
+		margin: 45px 0% 2% 0%;         
+	}
+	
+	#image {
+
+		max-height: 350px;
+		margin: 10px; 
+	}
+
+	#imagem1, #imagem2 {
+
+		display: none; 
+	}
+	
+	.botao {    
+		      
+		text-align: center; 
+		align-items: center;
+		width: 60px;
+		height: 60px;
+	}
+
+	.titulo #frase {  
+
+		text-align:  center;
+		border-radius: 20px;
+		box-shadow: 0px 3px 10px #464646;
+		padding: 0% 5% 0% 5%;
+		margin: 15% 14% 15% 14%;             
+	}
+
+	.texto #sobre {
+
+		margin: 0px 10px 7px 13px;
+		padding-bottom: 15px;
+		height: 360px;
+	}
+
+	.texto{
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#imgRetros {
+
+		margin: 25px;  
+		padding: 1% 0% 1% 0%; 
+	}
+
+	.btn {
+
+		font-size: 1.4rem;	
+	}
+
+	aside .contato {
+	
+		margin: 2% 0% 2% 0%;              
+	}	/*top right bottom left*/
+
+	
+	#rodape img {
+
+		max-width: 380px;
+	}
+
+	#rodape p {
+	
+		font-size: 8px;
+	}
+}
